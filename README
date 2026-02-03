@@ -1,0 +1,50 @@
+# Fokus ⏱️
+
+Aplicação de foco e produtividade inspirada na técnica Pomodoro, desenvolvida durante o curso  
+**JavaScript: manipulando elementos do DOM**, da Alura.
+
+O projeto permite alternar entre períodos de foco e descanso, controlar um cronômetro regressivo, tocar música ambiente opcional e atualizar a interface dinamicamente utilizando JavaScript puro.
+
+---
+
+## 🔍 Funcionalidades
+
+- ⏳ Cronômetro regressivo com exibição em minutos e segundos (MM:SS)
+- 🎯 Três modos de uso:
+  - Foco (25 minutos)
+  - Descanso curto (5 minutos)
+  - Descanso longo (15 minutos)
+- ▶️ Botão de iniciar e pausar o timer
+- 🔊 Efeitos sonoros ao iniciar, pausar e finalizar o tempo
+- 🎵 Música ambiente opcional com controle via checkbox
+- 🎨 Alteração dinâmica de texto, imagens e estilos conforme o contexto selecionado
+
+---
+
+## 🛠️ Tecnologias utilizadas
+
+- HTML5
+- CSS3
+- JavaScript (Vanilla JS)
+- Manipulação do DOM
+- Eventos (`click`, `change`)
+- `setInterval` e `clearInterval`
+- Áudio com a API `Audio`
+
+---
+
+## 🧠 Conceitos praticados
+
+- Seleção e manipulação de elementos do DOM
+- Atualização dinâmica de conteúdo com JavaScript
+- Controle de estado da aplicação
+- Trabalhar com timers e contagem regressiva
+- Boas práticas de organização de código
+- Separação de responsabilidades (UI, lógica e eventos)
+
+---
+
+## Visualizar projeto :
+
+
+
