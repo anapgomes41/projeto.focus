@@ -8,9 +8,9 @@ const tarefas = JSON.parse(localStorage.getItem("tarefas")) || []
 function criarElementoTarefa(tarefa) {
     const li = document.createElement("li")
     li.classList.add("app__section-task-list-item")
-    
-    const svg = document.createElement("svg")
-    svg.innerHTML = `
+
+    const containerSvg = document.createElement("div")
+    containerSvg.innerHTML = `
         <svg class="app__section-task-icon-status" width="24" height="24" viewBox="0 0 24 24" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <circle cx="12" cy="12" r="12" fill="#FFF"></circle>
@@ -20,6 +20,7 @@ function criarElementoTarefa(tarefa) {
             </path>
         </svg>
     `
+
     const paragrafo = document.createElement("p")
     paragrafo.textContent = tarefa.descricao
     paragrafo.classList.add("app__section-task-list-item-description")
@@ -30,9 +31,11 @@ function criarElementoTarefa(tarefa) {
     const imagemBotao = document.createElement("img")
     imagemBotao.setAttribute("src", "./imagens/edit.png")
     botao.appendChild(imagemBotao)
-    li.appendChild(svg)
+
+    li.appendChild(containerSvg)
     li.appendChild(paragrafo)
     li.appendChild(botao)
+
     return li
 }
 
@@ -42,18 +45,22 @@ btnAdicionarTarefa.addEventListener("click", () => {
 
 formAdicionarTarefa.addEventListener("submit", (evento) => {
     evento.preventDefault()
+
     const tarefa = {
         descricao: textarea.value
     }
+
     tarefas.push(tarefa)
+    localStorage.setItem("tarefas", JSON.stringify(tarefas))
+
     const elementoTarefa = criarElementoTarefa(tarefa)
     ulTarefas.appendChild(elementoTarefa)
+
     textarea.value = ""
     formAdicionarTarefa.classList.add("hidden")
 })
 
 tarefas.forEach((tarefa) => {
     const elementoTarefa = criarElementoTarefa(tarefa)
-    ulTarefas.append(elementoTarefa)
+    ulTarefas.appendChild(elementoTarefa)
 })
-
