@@ -86,6 +86,12 @@ function alterarContexto(contexto) {
 function contagemRegressiva() {
     if (tempoDecorridoEmSegundos <= 0) {
         audioTempoFinalizado.play()
+        alert("O tempo acabou!")
+        const focoAtivo = html.getAttribute("data-contexto") === "foco"
+        if (focoAtivo) {
+            const evento = new CustomEvent("FocoFinalizado")
+            document.dispatchEvent(evento)
+        }
         zerar()
         return
     }
