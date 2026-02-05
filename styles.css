@@ -510,3 +510,33 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0.8;
     cursor: not-allowed;
 }
+
+/* ===== Botões Editar e Excluir ===== */
+
+.app__section-task-list-item button {
+    background: none;
+    border: none;
+    font-size: 12px;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+/* Botão Editar */
+.app__section-task-list-item button:first-of-type {
+    color: #005eff;
+}
+
+.app__section-task-list-item button:first-of-type:hover {
+    background-color: rgba(0, 94, 255, 0.1);
+}
+
+/* Botão Excluir */
+.app__section-task-list-item button:last-of-type {
+    color: #d00000;
+}
+
+.app__section-task-list-item button:last-of-type:hover {
+    background-color: rgba(208, 0, 0, 0.1);
+}
